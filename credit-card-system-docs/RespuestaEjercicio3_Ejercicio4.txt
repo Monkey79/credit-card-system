@@ -1,0 +1,36 @@
+[Ejercicio 3] - IOT
+
+Analizar la siguiente situación y responder:
+Tu equipo de trabajo está desarrollando un sistema de monitoreo de
+cámaras de seguridad. El sistema debe mostrar la imagen de hasta
+10 cámaras. Cada cámara se muestra en un marco/monitor. Se
+requiere disminuir al mínimo el ancho de banda utilizado, de tal
+manera que, si la cámara no modifica su imagen, el sistema siga
+mostrando la misma captura hasta que haya un cambio en la
+imagen que la cámara toma.
+¿Qué patrón de diseño elegirías para implementar este problema en
+una solución de software? ¿
+
+Rta: No tengo mucha exp en el area de IOT pero haciendo analogia 
+a lo que si tengo experiencia diria que podria usar algun tipo
+de "intermediario" algo como una especia de "api-gateway" que este
+entre las camaras y los monitores y atraves de alguna libreria de 
+comparacion de imagenes compare la ultima imagen que salio de la
+camara con la que esta en el monitor y si difieren, entonces la envia
+al mismo caso contrario no haga nada.
+
+camaras                                                 monitores
+|  |--------> ************************************* -->    [  ]
+|  |          *                                   *
+              *                                   *
+|  |--------> * <midleware-cercano a las camaras> * -->    [  ]
+|  |          *        "api-gateway"              *
+              *                                   * 
+|  |--------> *                                   * -->    [  ]
+|  |          * ***********************************
+
+
+
+[Ejercicio 4] - Mediana
+Hecho en credit-card-system-desktop_app/src/main/java/com.eldar.menu.utils/Mediana.java
+
